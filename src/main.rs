@@ -1,10 +1,12 @@
 mod components;
+mod router;
 
 use std::ops::Deref;
 use yew::prelude::*;
 use yew::ContextProvider;
 use components::{atoms::title::{Title, Color}, molecules::form::{Data, CustomForm}};
-
+use::yew_router::prelude::*;
+use router::{Route, switch};
 
 #[derive(Clone, PartialEq, Default)]
 pub struct User {
@@ -40,8 +42,11 @@ pub fn app() -> Html {
 
     html! {
 		<ContextProvider<User> context = {state.deref().clone()}>
-		<Title title = "This is a TITLE" color = {Color::Normal}/>
-		<CustomForm onsubmit = {custom_form_submit}/>
+            <Title title = "This is a TITLE" color = {Color::Normal}/>
+            <CustomForm onsubmit = {custom_form_submit}/>
+            <BrowserRouter>
+                <Switch<Route> render = {Switch::render(switch)} />
+            </BrowserRouter>
 		</ContextProvider<User>>
     }
 }
