@@ -65,10 +65,10 @@ pub fn custom_form(props : &Props) -> Html {
     html!(
         <form onsubmit={onsubmit}>
             <TextInput label = "Name" name="username" handle_onchange={username_changed}/>
-            <TextInput label = "Pos in DOTA TWO" name="favorite pos in dota" handle_onchange={pos_changed}/>
+            <TextInput label = "Pos " name="pos" handle_onchange={pos_changed}/>
             <CustomButton label="push"/>
             <p>{"Name: "}{user_context.clone().unwrap_or_default().username}</p>
-            <p>{"PoS in DOTA DVA: "}{user_context.unwrap_or_default().pos}</p>
+            <p>{"PoS: "}{user_context.unwrap_or_default().pos}</p>
         </form>
     )
 }
