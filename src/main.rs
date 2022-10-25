@@ -47,14 +47,15 @@ pub fn app() -> Html {
 
     html! {
 		<ContextProvider<User> context = {state.deref().clone()}>
-            <Title title = "This is a TITLE" color = {Color::Normal}/>
-            <CustomForm onsubmit = {custom_form_submit}/>
-            <StructHello message = {"?!?!!?!?!?"}/>
+           // <Title title = "This is a TITLE" color = {Color::Normal}/>
+          //  <CustomForm onsubmit = {custom_form_submit}/>
+           // <StructHello message = {"?!?!!?!?!?"}/>
             <BrowserRouter>
                 <Switch<Route> render = {Switch::render(switch)} />
             </BrowserRouter>
-            <IncrementCount />
-            <DisplayCount />
+
+         //   <IncrementCount />
+       //     <DisplayCount />
 		</ContextProvider<User>>
     }
 }

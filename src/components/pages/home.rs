@@ -12,6 +12,8 @@ pub fn home() -> html {
 
         </div>
             <Link<Route> to = { Route::Hello}> {"hello???"}</Link<Route>>
+            <br />
+            <Link<Route> to = { Route::Auth}> {"Authorization"}</Link<Route>>
         </div>
     )
 }

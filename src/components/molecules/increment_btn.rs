@@ -1,7 +1,7 @@
 use std::rc::Rc;
 
 use yew::prelude::*;
-use yewdux::{prelude::*, dispatch};
+use yewdux::prelude::*;
 
 use crate::store::counter_store::CounterStore;
 
